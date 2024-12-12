@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -138,7 +139,7 @@
             this.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancelar.ForeColor = System.Drawing.Color.White;
-            this.btncancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.btncancelar.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
             this.btncancelar.IconColor = System.Drawing.Color.White;
             this.btncancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btncancelar.IconSize = 21;
@@ -164,13 +165,14 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.LogoCanal;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(421, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(106, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Login
             // 
@@ -193,6 +195,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
